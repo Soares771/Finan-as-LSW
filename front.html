@@ -11,9 +11,10 @@
         <h1>Finanças++</h1>
 
     </header>
-
+      <!-- Container principal -->
      <main class="container">
-
+        
+        <!--Painel do Balanço das receitas  -->
         <section class="balanco">
             <div class="balanco-card">
                 <h3>Receitas</h3>
@@ -27,9 +28,32 @@
                 <h3>Saldo</h3>
                 <p id="saldo-total">R$ 0,00</p>
             </div>
-        
-
+                  <!-- Area do formulario para o usuario inserir dados -->
+        <section class="formulario-container">
+            <h2>Adicionar Transação</h2>
+            <form id="form-transacao">
+                <input type="text" id="form-titulo" placeholder="Título da Transação" required>
+                <input type="number" id="form-valor" placeholder="Valor (R$)" required>
+                <input type="date" id="form-data" required>
+                <select id="form-tipo" required>
+                    <option value="" disabled selected>Tipo</option>
+                    <option value="moradia">Moradia</option>
+                    <option value="receita">Receita</option>
+                    <option value="despesa">Despesa</option>
+                    <option value="investimento">Investimento</option>
+                    <option value="poupanca">Poupança</option>
+                    <option value="lazer">Lazer</option>
+                    <opttion value="outro">Outro</option>
+                </select>
+                <select id="form-tipo" required>
+                    <option value="" disabled selected>Selecione a categoria</option>
+                    <option value="receita">Receita</option>
+                    <option value="despesa">Despesa</option>
+                <select>
+                <button type="submit">Adicionar</button>
+            </form>
         </section>
+    </section>
 
 </body>
 </html>
