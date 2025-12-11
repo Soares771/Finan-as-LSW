@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanças++ - Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Finanças++</h1>
+        <h3>Acesse sua Conta</h3>
+        <!--LOGIN-->
+        <div id="login-forn">
+            <input type="email" id="login-email" placeholder="E-mail">
+            <div class="senha-container">
+                <input type="password" id="login-senha" placeholder="Senha">
+                <span class="toggle-senha" onclick="mostrarSenha('login-senha')">👁️</span>
+            </div>
+            <button onclick="fazerLogin()">Entrar</button>
+            <p class="link">Não tem Conta?<span onclick="mostrarCadastro()">Criar Nova Conta</span></p>
+            <p id="Erro-login" class="Erro">E-mail ou Senha incorretos!</p>
+        </div>
+
+        <!--CADASTRO-->
+        <div id="cadastro-form" style="display:none;">
+            <input type="text" id="cadastro-nome" placeholder="Seu nome">
+
+            <input type="email" id="cadastro-email" placeholder="E-mail">
+            <div class="senha-container">
+                <input type="password" id="cadastro-senha" placeholder="Senha">
+                <span class="toggle-senha" onclick="mostrarSenha('cadastra-se')">👁️</span>
+            </div>
+            <p id="forca-senha" class="senha-force"></p>
+            <button onclick="criarConta()">Criar Conta</button>
+            <p class="link">Já tem conta?<span onclick="mostrarLogin()">Entrar</span></p>
+            <p id="erro-cadastro" class="erro">Preencha os campos corretamente!</p>
+            <p id="sucesso-cadastro" class="sucesso">Conta criada com sucesso!</p>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
