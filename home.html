@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>finanças+</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -23,24 +25,28 @@
         <h1>finanças<span class="mudarCorETamanho">+</span></h1>
         <div class="frase-dinamica" id="frase"></div>
 
-        <div class="cardInicial">  <a href="front.html">Gerenciar dinheiro</a></div>
-        <div class="cardInicial">  <a href="metas.html">Gerenciar dinheiro</a></div>
+        <div class="cardInicialContainer">
+          <div class="cardInicial">  <a href="front.html">Gerenciar dinheiro</a></div>
+          <div class="cardInicial">  <a href="metas.html">Gerenciar metas</a></div>
+        </div>
 
         <h2 class="topico">Resumo financeiro</h2>
-            <div class="card">
-                <h3>Ganhos</h3>
-                <p id="dashboard-ganhos">R$ 0,00</p>
-            </div>
-            
-            <div class="card">
-                <h3>Gastos</h3>
-                <p id="dashboard-gastos">R$ 0,00</p>
-            </div>
+        <div class="cards-resumo">
+          <div class="card">
+            <h3>Ganhos</h3>
+            <p id="dashboard-ganhos">R$ 0,00</p>
+          </div>
 
-            <div class="card">
-                <h3>Saldo</h3>
-                <p id="dashboard-saldo">R$ 0,00</p>
-            </div>
+          <div class="card">
+            <h3>Gastos</h3>
+            <p id="dashboard-gastos">R$ 0,00</p>
+          </div>
+
+          <div class="card">
+            <h3>Saldo</h3>
+            <p id="dashboard-saldo">R$ 0,00</p>
+          </div>
+      </div>
 
         <h2 class="topico">Metas ativas</h2>
             <div class="cardMeta">
@@ -57,7 +63,7 @@
     </main>
 
      <footer>
-        Finanças+ 2025 &copy- Seu controle financeiro simplificado.
+        Finanças+ 2025 &copy - Seu controle financeiro simplificado.
     </footer>
 </body>
 </html>
