@@ -1,0 +1,362 @@
+/* ===============================
+   1. Variáveis (Paleta Dark Mode)
+   =============================== */
+:root {
+    /* Cores extraídas da imagem escura */
+    --bg-color: #050521;        /* Fundo bem escuro (Deep Navy) */
+    --card-bg: #15173c;         /* Fundo dos cartões (Navy mais claro) */
+    --header-bg: #ffffff;       /* Cabeçalho branco */
+    
+    --primary-color: #00d9b9;   /* Ciano vibrante (Textos destaque) */
+    --button-bg: #0e7568;       /* Verde Petróleo (Botão) */
+    
+    --text-main: #ffffff;       /* Texto principal branco */
+    --text-dark: #050521;       /* Texto para fundos claros (Header) */
+    --text-muted: #a0a0b0;      /* Texto secundário cinza claro */
+    
+    --input-bg: #21234a;        /* Fundo dos inputs */
+    --border-color: #2e2e5e;    /* Bordas sutis */
+    
+    --green-income: #00e676;    /* Receitas */
+    --red-expense: #ff5252;     /* Despesas */
+    --shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra mais forte p/ o escuro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+/* ===============================
+   2. Cabeçalho (Header Branco)
+   =============================== */
+.cabecalho {
+    background: var(--header-bg);
+    padding: 1.5rem 2rem 6rem; /* Padding inferior grande para sobreposição */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: #002c4f; /* Azul escuro para contrastar com o branco */
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: var(--button-bg); /* O "+" na cor do tema */
+}
+
+.cabecalho nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.cabecalho nav a {
+    color: var(--text-dark); /* Texto escuro no fundo branco */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.cabecalho nav a:hover,
+.cabecalho nav a.atual {
+    color: var(--button-bg);
+}
+
+/* ===============================
+   3. Container Principal
+   =============================== */
+.container {
+    width: min(95%, 1120px);
+    margin: auto;
+}
+
+/* ===============================
+   4. Seção de Balanço (Cards Escuros)
+   =============================== */
+.balanco {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: -4rem; /* Sobe por cima do header */
+}
+
+.balanco-card {
+    background: var(--card-bg);
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.balanco-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--primary-color); /* Títulos em Ciano (Ganhos/Gastos) */
+    font-weight: 500;
+}
+
+.balanco-card p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: #fff;
+}
+
+/* Destaque para o card de Saldo se quiser diferenciar, 
+   mas na imagem todos os cards de resumo têm o mesmo fundo */
+.balanco-card.saldo h3 {
+    color: var(--primary-color);
+}
+
+/* ===============================
+   5. Formulário (Dark Mode)
+   =============================== */
+.formulario-container {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.formulario-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color); /* Título "Adicionar Transação" em Ciano */
+    font-weight: 600;
+}
+
+#form-transacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.2rem;
+}
+
+/* Estilo dos Inputs no modo escuro */
+input, select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--border-color);
+    background: var(--input-bg); /* Fundo roxo escuro */
+    color: #fff; /* Texto branco ao digitar */
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Placeholder com cor mais suave */
+::placeholder {
+    color: var(--text-muted);
+}
+
+/* Foca no input muda a borda para ciano */
+input:focus, select:focus {
+    border-color: var(--primary-color);
+}
+
+#form-titulo {
+    grid-column: span 2; 
+}
+
+/* Botão com a cor Verde Petróleo da imagem */
+button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background: var(--button-bg);
+    color: #fff;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: filter 0.2s;
+    grid-column: span 2; 
+}
+
+button[type="submit"]:hover {
+    filter: brightness(1.1); /* Fica um pouco mais claro no hover */
+}
+
+/* ===============================
+   6. Filtros e Lista
+   =============================== */
+.filtros-container {
+    margin-top: 2rem;
+}
+
+.filtros-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.filtros {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#filtro-busca {
+    flex: 3; 
+}
+#filtro-tipo {
+    flex: 1;
+}
+
+#lista-transacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+/* Estilo dos itens da lista (caso o JS gere eles) */
+.transacao-item {
+    background: var(--card-bg);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+/* ===============================
+   7. Rodapé
+   =============================== */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   8. Responsividade
+   =============================== */
+@media (max-width: 800px) {
+    .balanco {
+        grid-template-columns: 1fr;
+        margin-top: -2rem;
+    }
+    #form-transacao {
+        grid-template-columns: 1fr; 
+    }
+    #form-titulo, button[type="submit"] {
+        grid-column: span 1;
+    }
+    .filtros {
+        flex-direction: column;
+    }
+    .cabecalho {
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 3rem;
+    }
+}
+/* ===============================
+   9. Estilização do Histórico (Lista JS)
+   =============================== */
+
+/* Remove as bolinhas da lista e tira margens */
+#lista-transacoes {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo de CADA item da transação (A caixa retangular) */
+#lista-transacoes li {
+    background-color: var(--card-bg); /* Azul escuro do tema */
+    color: #fff; /* Texto branco */
+    display: flex;
+    justify-content: space-between; /* Texto na esquerda, valor na direita */
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color); /* Borda sutil */
+    box-shadow: var(--shadow);
+    position: relative; /* Para posicionar a borda colorida */
+    overflow: hidden;
+}
+
+/* Tamanho e cor do título da transação */
+#lista-transacoes li h4 { 
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-main);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Tamanho e cor da data/categoria (texto pequeno) */
+#lista-transacoes li small {
+    color: var(--text-muted); /* Cinza claro */
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Estilo do Valor (R$) */
+#lista-transacoes li span {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Botão de excluir (O 'X') */
+.delete-btn {
+    background-color: #c0392b;
+    color: #fff;
+    border: 0;
+    padding: 5px 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+/* --- Bordas Coloridas (Receita vs Despesa) --- */
+
+/* Se o seu JS adiciona a classe "plus" ou "receita" */
+#lista-transacoes li.plus, 
+#lista-transacoes li.receita {
+    border-right: 6px solid var(--green-income); /* Borda verde na direita */
+}
+
+/* Se o seu JS adiciona a classe "minus" ou "despesa" */
+#lista-transacoes li.minus, 
+#lista-transacoes li.despesa {
+    border-right: 6px solid var(--red-expense); /* Borda vermelha na direita */
+}
+
+/* Ajuste para garantir que o valor fique verde ou vermelho também */
+#lista-transacoes li.plus span,
+#lista-transacoes li.receita span {
+    color: var(--green-income);
+}
+
+#lista-transacoes li.minus span,
+#lista-transacoes li.despesa span {
+    color: var(--red-expense);
+}
