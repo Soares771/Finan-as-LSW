@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0d0b3d url("imagens/imgdefundo.png") no-repeat center/cover;
+  min-height: 100vh;
+  color: white;
+}
+
+/* navbar */
+.cabecalho{
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.logo{
+  color: #0f172a;
+  text-shadow: 1.5px 1.5px 2px rgba(15, 23, 42, 0.5);
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.mudarCor{
+  color:#0f766e;
+}
+
+.abas{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.abas li a{
+  border-radius: 5px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: bold;
+  padding: 6px 12px;
+}
+
+.abas li a:hover, .abas li a.atual {
+  background: #0f766e;
+  color: white;
+}
+
+/* Conteudo principal */
+main{
+  width: 90%;
+  max-width: 900px;
+  margin: 36px auto;
+}
+
+h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  text-shadow: 1px 1px 1.5px rgba(255, 255, 255, .7);
+  margin: 0 0 5px;
+}
+
+.frase-dinamica {  
+  text-align: center;  
+  font-size: 18px;  
+  font-style: italic;  
+  margin-bottom: 25px;  
+  height: 24px;  
+  opacity: 0.9;  
+}
+.cardInicialContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.cardInicial{
+  width: 50%;
+  min-width: 350px;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
+  background: #0f766e;
+  padding: 15px;
+  margin: 5px 0;
+}
+
+.cardInicial a{
+  text-decoration: none;
+  color: white;
+}
+
+.topico{
+  margin: 35px auto 10px;
+  font-size: 22px;
+  color: #0fedd0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+
+.cards-resumo {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cards-resumo .card {
+  flex: 1;
+  min-width: 180px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.55);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #0fedd0;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cardMeta {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 15px 0;
+  color: #e5e5e5;
+  font-size: 14px;
+  opacity: 0.85;
+}
