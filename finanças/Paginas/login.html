@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Finanças+</title>
+    <link rel="stylesheet" href="/finanças/Style/style.css"> 
+    <link rel="stylesheet" href="/finanças/Style/login.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">finanças<span class="mudarCor">+</span></div>
+        <nav>
+            <ul>
+            
+                <li> <a href="#" class="atual">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-login">
+        <section class="login-box">
+            <h2>Acesso ao Finanças<span class="mudarCor">+</span></h2>
+            <form id="form-login">
+                <div class="input-grupo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+                
+                <div class="input-grupo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" placeholder="Insira sua senha" required>
+                </div>
+                
+                <p id="mensagem-erro" class="erro"></p>
+                
+                <button type="submit">Entrar</button>
+                
+                <div class="opcoes">
+                    <a href="recuperar.html">Esqueci a senha</a>
+                    <span>|</span>
+                    <a href="cadastro.html">Cadastre-se</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        Finanças+ 2025 &copy- Seu controle financeiro simplificado.
+    </footer>
+    
+    <script src="/finanças/Script/login.js"></script>
+</body>
+</html>

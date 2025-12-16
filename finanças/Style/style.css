@@ -1,0 +1,122 @@
+/* ==================================== */
+/* 1. Estilos Globais (style.css) - TEMA ESCURO */
+/* ==================================== */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #12121e; /* Fundo principal: Azul Marinho Escuro */
+    color: #f0f0f0; /* Texto claro */
+}
+
+/* --- Cabeçalho --- */
+.cabecalho {
+    background-color: #000000; /* Preto sólido para o topo */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #f0f0f0; /* Texto branco */
+}
+
+/* Destaque em Verde Água/Ciano (MudarCor) */
+.mudarCor\+ {
+    color: #00bcd4; /* Ciano/Verde Água de destaque */
+}
+
+.cabecalho nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.cabecalho nav ul li a {
+    text-decoration: none;
+    color: #b0b0b0; /* Cinza claro para links normais */
+    margin-left: 25px;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.cabecalho nav ul li a.atual {
+    color: #00bcd4; /* Cor de destaque para aba atual */
+    border-bottom: 3px solid #00bcd4;
+    font-weight: 600;
+}
+
+/* --- Container Principal (Dashboard) --- */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- Cartões de Balanço (Receitas/Despesas/Saldo) --- */
+.balanco { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 40px; }
+
+.balanco-card {
+    background-color: #1a233b; /* Azul Escuro */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    text-align: center;
+    border: 1px solid #303f9f; /* Borda sutil */
+}
+
+.balanco-card h3 {
+    margin-top: 0;
+    color: #b0b0b0; 
+}
+
+.balanco-card p {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #f0f0f0; /* Texto branco */
+}
+
+/* Destaque Saldo (Verde positivo, Vermelho negativo) */
+.balanco-card.saldo p {
+    color: #f0f0f0; /* Cor inicial branca */
+}
+
+/* --- Formulário e Histórico --- */
+.formulario-container, .filtros-container { 
+    background-color: #ffffff; /* Fundo branco/claro (mantido como na imagem) */
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 40px; 
+    color: #333; /* Texto escuro dentro da caixa branca */
+}
+
+.formulario-container h2 { color: #1a233b; } /* Título em Azul Escuro */
+
+/* Estilo para Tabela (Lista de Transações) */
+#lista-transacoes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1a233b; 
+    color: #f0f0f0; 
+}
+
+/* --- Rodapé --- */
+footer {
+    text-align: center;
+    padding: 18px;
+    background-color: #1a233b; /* Fundo escuro */
+    color: #b0b0b0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px;
+    border-top: 2px solid #00bcd4; /* Linha de destaque Ciano */
+}

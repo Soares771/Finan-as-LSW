@@ -1,0 +1,104 @@
+/* ==================================== */
+/* 2. Estilos de Formulário (login.css) - TEMA ESCURO */
+/* ==================================== */
+
+/* Centraliza o formulário */
+.container-login { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 80vh; 
+    padding: 20px; 
+    background-color: #12121e; /* Fundo principal escuro */
+}
+
+/* Caixa principal do formulário */
+.login-box {
+    background-color: #1a233b; /* Azul Escuro */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 380px; 
+    text-align: center;
+    border: 1px solid #303f9f;
+    color: #f0f0f0; /* Texto padrão branco */
+}
+
+.login-box h2 {
+    margin-bottom: 30px;
+    color: #00bcd4; /* Cor de destaque Ciano */
+    font-size: 1.7em;
+}
+
+.input-grupo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-grupo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #b0b0b0; /* Cinza claro para labels */
+}
+
+/* Estilo dos campos de input */
+.login-box input[type="email"],
+.login-box input[type="password"],
+.login-box input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #303f9f;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 1em;
+    background-color: #26324b; /* Fundo do input ligeiramente mais claro que a caixa */
+    color: #f0f0f0;
+}
+
+/* Botão de Destaque (Ação) */
+.login-box button[type="submit"] {
+    padding: 12px;
+    background-color: #00bcd4; /* Ciano de Ação */
+    color: #12121e; /* Texto escuro no botão claro */
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.login-box button[type="submit"]:hover {
+    background-color: #0097a7;
+}
+
+/* Mensagens de erro */
+.erro {
+    color: #ff5252; /* Vermelho claro para erro */
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    min-height: 20px; 
+}
+
+/* Links de opções (Cadastre-se, Esqueci a Senha) */
+.opcoes {
+    margin-top: 25px;
+    font-size: 0.9em;
+}
+
+.opcoes a {
+    color: #00bcd4; /* Links em Ciano */
+    text-decoration: none;
+}
+.opcoes a:hover {
+    text-decoration: underline;
+}
+.opcoes span {
+    margin: 0 10px;
+    color: #555;
+}
