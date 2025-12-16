@@ -268,34 +268,34 @@ footer {
     }
 }
 /* ===============================
-   9. Estilização do Histórico (Lista JS)
+   9. Estilização do Histórico (Lista)
    =============================== */
 
-/* Remove as bolinhas da lista e tira margens */
+/* Container da Lista */
 #lista-transacoes {
     list-style: none;
-    padding: 0;
+    padding: 0 0 3rem 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem; /* Importante: define o espaço entre os cards */
 }
 
-/* Estilo de CADA item da transação (A caixa retangular) */
+/* Estilo de CADA item da transação (LI) */
 #lista-transacoes li {
     background-color: var(--card-bg); /* Azul escuro do tema */
     color: #fff; /* Texto branco */
     display: flex;
-    justify-content: space-between; /* Texto na esquerda, valor na direita */
+    justify-content: space-between; 
     align-items: center;
     padding: 1.2rem;
     border-radius: 5px;
-    border: 1px solid var(--border-color); /* Borda sutil */
+    border: 1px solid var(--border-color); 
     box-shadow: var(--shadow);
-    position: relative; /* Para posicionar a borda colorida */
+    position: relative; 
     overflow: hidden;
 }
 
-/* Tamanho e cor do título da transação */
+/* Título da transação */
 #lista-transacoes li h4 { 
     margin: 0;
     font-size: 1rem;
@@ -304,21 +304,21 @@ footer {
     text-transform: capitalize;
 }
 
-/* Tamanho e cor da data/categoria (texto pequeno) */
+/* Data/Categoria */
 #lista-transacoes li small {
-    color: var(--text-muted); /* Cinza claro */
+    color: var(--text-muted);
     font-size: 0.85rem;
     margin-top: 5px;
     display: block;
 }
 
-/* Estilo do Valor (R$) */
+/* Valor (R$) */
 #lista-transacoes li span {
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-/* Botão de excluir (O 'X') */
+/* --- Botão de Excluir --- */
 .delete-btn {
     background-color: #c0392b;
     color: #fff;
@@ -336,27 +336,20 @@ footer {
     opacity: 1;
 }
 
-/* --- Bordas Coloridas (Receita vs Despesa) --- */
+/* --- Bordas Coloridas e Cores dos Valores --- */
 
-/* Se o seu JS adiciona a classe "plus" ou "receita" */
-#lista-transacoes li.plus, 
+/* Receitas (Borda e Texto Verdes) */
 #lista-transacoes li.receita {
-    border-right: 6px solid var(--green-income); /* Borda verde na direita */
+    border-right: 6px solid var(--green-income);
 }
-
-/* Se o seu JS adiciona a classe "minus" ou "despesa" */
-#lista-transacoes li.minus, 
-#lista-transacoes li.despesa {
-    border-right: 6px solid var(--red-expense); /* Borda vermelha na direita */
-}
-
-/* Ajuste para garantir que o valor fique verde ou vermelho também */
-#lista-transacoes li.plus span,
 #lista-transacoes li.receita span {
     color: var(--green-income);
 }
 
-#lista-transacoes li.minus span,
+/* Despesas (Borda e Texto Vermelhos) */
+#lista-transacoes li.despesa {
+    border-right: 6px solid var(--red-expense);
+}
 #lista-transacoes li.despesa span {
     color: var(--red-expense);
 }
