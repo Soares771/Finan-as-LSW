@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Metas (apagar esse h1)</h1>
      <header class="cabecalho">
         <div class="logo">finanças<span class="mudarCor">+</span></div>
 
@@ -19,6 +19,31 @@
             </ul>
         </nav>
     </header>
+
+ <main class="container-metas">
+
+    <div class="resumoMetas">
+      <div class="resumo-card">
+        <h3>Metas ativas</h3>
+        <p id="ativa">0</p>
+      </div>
+
+      <div class="resumo-card">
+        <h3>Metas concluídas</h3>
+        <p id="concluidas">0</p>
+      </div>
+    </div>
+
+    <div class="addMeta">
+      <h2>Adicionar Meta</h2>
+      <input type="text" id="nomeMeta" placeholder="Nome da meta">
+      <input type="number" id="objetivo" placeholder="Valor total (R$)">
+      <button onclick="criarMeta()">Adicionar meta</button>
+    </div>
+
+    <div id="listaMetas"></div>
+
+  </main>
      <footer>
         Finanças+ 2025 &copy- Seu controle financeiro simplificado.
     </footer>
