@@ -199,6 +199,11 @@ button[type="submit"]:hover {
    =============================== */
 .filtros-container {
     margin-top: 2rem;
+    background: var(--card-bg);  /* Usa a cor azul escura (#15173c) */
+    padding: 1.5rem;             /* Espaço interno para não ficar colado */
+    border-radius: 0.5rem;       /* Bordas arredondadas */
+    border: 1px solid var(--border-color); /* Borda sutil */
+    box-shadow: var(--shadow);
 }
 
 .filtros-container h2 {
