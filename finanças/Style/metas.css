@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0d0b3d url("imagens/file_000000009f0471f5b4a83a354d2bae57.png") no-repeat center/cover;
+  min-height: 100vh;
+  color: white;
+}
+
+/* navbar */
+.cabecalho{
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.logo{
+  color: #0f172a;
+  text-shadow: 1.5px 1.5px 2px rgba(15, 23, 42, 0.5);
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.mudarCor{
+  color:#0f766e;
+}
+
+.abas{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.abas li a{
+  border-radius: 5px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: bold;
+  padding: 6px 12px;
+}
+
+.abas li a:hover, .abas li a.atual {
+  background: #0f766e;
+  color: white;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.resumoMetas {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .resumo-card {
+      flex: 1;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .resumo-card h3 {
+      color: #0fedd0;
+      margin-bottom: 8px;
+    }
+
+    .resumo-card p {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .addMeta {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .addMeta h2 {
+      color: #0fedd0;
+      margin-bottom: 12px;
+    }
+
+    .addMeta input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+
+    .addMeta button {
+      width: 100%;
+      padding: 12px;
+      background: #0f766e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #listaMetas {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .meta {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .meta h3 {
+      color: #0fedd0;
+      margin-bottom: 6px;
+    }
+
+    .meta button {
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: #0f766e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .meta button:disabled {
+      background: gray;
+      cursor: not-allowed;
+    }
+
+.resumoMetas {
+  max-width: 800px;
+}
+
+.addMeta {
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+}
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 15px 0;
+  color: #e5e5e5;
+  font-size: 14px;
+  opacity: 0.85;
+}
