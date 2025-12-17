@@ -12,13 +12,20 @@ body {
 }
 
 /* navbar */
-.cabecalho{
-  width: 100%;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
+
+.cabecalho {
+    background: var(--header-bg);
+    padding: 1.5rem 2rem 6rem; /* Padding inferior grande para sobreposição */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    background: white;
+    padding: 10px 15px;
+}
+.cabecalho .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .logo{
@@ -52,11 +59,6 @@ body {
 }
 
 /* Conteudo principal */
-main{
-  width: 90%;
-  max-width: 900px;
-  margin: 36px auto;
-}
 
 h1{
   text-transform: uppercase;
@@ -71,8 +73,7 @@ h1{
   text-align: center;  
   font-size: 18px;  
   font-style: italic;  
-  margin-bottom: 25px;  
-  height: 24px;  
+  margin-bottom: 20px; 
   opacity: 0.9;  
 }
 .cardInicialContainer{

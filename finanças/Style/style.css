@@ -55,8 +55,9 @@ body {
 /* --- Container Principal (Dashboard) --- */
 .container {
     max-width: 1200px;
-    margin: 30px auto;
+    width: min(95%);
     padding: 0 20px;
+    margin: auto;
 }
 
 /* --- Cartões de Balanço (Receitas/Despesas/Saldo) --- */

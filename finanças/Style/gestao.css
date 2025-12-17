@@ -39,11 +39,13 @@ body {
    =============================== */
 .cabecalho {
     background: var(--header-bg);
-    padding: 1.5rem 2rem 6rem; /* Padding inferior grande para sobreposição */
+    
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.cabecalho .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -91,7 +93,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: -4rem; /* Sobe por cima do header */
+    margin-top: 1rem; /* Sobe por cima do header */
 }
 
 .balanco-card {
