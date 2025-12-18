@@ -49,60 +49,57 @@ img {
    Header / Cabeçalho (Fundo Branco)
    ========================================= */
 .cabecalho {
-    background-color: var(--header-bg);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 1rem 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px 0;
 }
 
-/* Container utilitário para centralizar conteúdo */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    width: 100%;
-}
-
-/* Flexbox para alinhar logo e menu dentro do container */
 .cabecalho .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--header-text);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  text-shadow: 1.5px 1.5px 2px rgba(15, 23, 42, 0.5);
+  letter-spacing: 1px;
 }
 
 .logo span {
-    color: var(--primary); /* O "+" fica verde */
+  color: #0f766e;
 }
 
 .cabecalho nav ul {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 30px;
+  list-style: none;
 }
 
 .cabecalho nav a {
-    color: var(--header-text);
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 5px 10px;
-    border-radius: 4px;
+  color: #a1a1aa;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  transition: all 0.3s ease;
 }
 
-.cabecalho nav a:hover {
-    color: var(--primary);
-}
-
+.cabecalho nav a:hover,
 .cabecalho nav a.atual {
-    color: var(--primary);
-    position: relative;
+  background: transparent;
+  color: #00bcd4;
+  border-bottom: 3px solid #00bcd4;
 }
-
 /* =========================================
    Conteúdo Principal (Sobre)
    ========================================= */
@@ -146,8 +143,8 @@ h2 {
    ========================================= */
 .grid-colabs {
     display: grid;
-    /* Cria colunas automáticas. Mínimo de 240px. 
-       Isso garante que fiquem lado a lado em telas grandes */
+    /* Cria colunas automáticas. Mínimo de 240px. */
+     
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
