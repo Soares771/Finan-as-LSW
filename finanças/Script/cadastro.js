@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // SUCESSO NO CADASTRO: Simula o registro e redireciona
-        alert('Cadastro de ' + nomeInput.value + ' realizado com sucesso! Redirecionando para a Gestão...');
-        window.location.href = 'front-principal.html'; 
+        alert('Cadastro de ' + nomeInput.value + ' realizado com sucesso! Redirecionando para a Pagina Inicial...');
+        window.location.href = '/finanças/Paginas/home.html'; 
     });
 });

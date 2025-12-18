@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (email === emailValido && senha === senhaValida) {
             // SUCESSO NO LOGIN: Redireciona para o dashboard
-            alert('Login bem-sucedido! Redirecionando para a Gestão...');
-            window.location.href = "gestao.html"; 
+            alert('Login bem-sucedido! Redirecionando para a Pagina Inicial...');
+            window.location.href = "home.html"; 
             
         } else {
             // FALHA NO LOGIN: Exibe a mensagem de erro
